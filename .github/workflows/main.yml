@@ -14,10 +14,11 @@ jobs:
        dotnet-version: | 
          8.0.x
               
-    - name: Build Projects
+    - name: Build Project
       run: |
         dotnet build ./ActExample/ActExample.csproj -c Release
 
     - name: Run Tests
       run: |
         dotnet build ./ActExampleTests/ActExampleTests.csproj -c Release
+        dotnet test ./ActExampleTests/ActExampleTests.csproj -c Release --no-build
