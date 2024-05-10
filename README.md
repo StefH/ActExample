@@ -1,4 +1,4 @@
-# An example for "act" to run your GitHub Actions locally 🚀
+# Example for "act" to run your GitHub Actions locally 🚀
 
 
 ## 📦 Install act
