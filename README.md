@@ -36,7 +36,7 @@ gh act --workflows .github/workflows/main.yml
 This needs to download the catthehacker/ubuntu:act-latest image and cache some JavaScript actions like `actions/setup-dotnet@v3`.
 
 
-``` ps
+```
 time="2024-05-10T11:11:42+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and daemon socket 'npipe:////./pipe/docker_engine'"
 [Build with Tests/build] 🚀  Start image=catthehacker/ubuntu:act-latest
 [Build with Tests/build]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
@@ -131,7 +131,7 @@ time="2024-05-10T11:11:42+02:00" level=info msg="Using docker host 'npipe:////./
 ### Logging (next time)
 Note that .NET 8 is always downloaded from the internet.
 
-``` ps
+```
 time="2024-05-10T11:14:31+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and daemon socket 'npipe:////./pipe/docker_engine'"
 [Build with Tests/build] 🚀  Start image=catthehacker/ubuntu:act-latest
 [Build with Tests/build]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
