@@ -1,0 +1,23 @@
+name: Build with Tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: linux
+
+    steps:  
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-dotnet@v3
+      with:
+       dotnet-version: | 
+         8.0.x
+              
+    - name: Build Projects
+      run: |
+        dotnet build ./ActExample/ActExample.csproj -c Release
+
+    - name: Run Tests
+      run: |
+        dotnet build ./ActExampleTests/ActExampleTests.csproj -c Release
