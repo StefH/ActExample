@@ -1,21 +1,37 @@
-# ActExample
-An example for: "act" Run your GitHub Actions locally 🚀
+# An example for "act" to run your GitHub Actions locally 🚀
 
 
-## Install act
+## 📦 Install act
 Installation as GitHub CLI extension:
 ``` cmd
 gh extension install https://github.com/nektos/gh-act
 ```
 
-## Usage
+## 💻 Usage
 Go to the root folder and run the following command:
 
 ``` cmd
 gh act
 ```
 
-Logging:
+### Run act on the 'push' event
+Run all workflows which have the
+``` yaml
+on: [push]
+```
+defined in the workflow file.
+
+Command:
+``` cmd
+gh act push
+```
+
+### Run act on a specific workflow
+``` cmd
+gh act --workflows .github/workflows/main.yml
+```
+
+### :memo: Logging
 ``` ps
 PS C:\Dev\GitHub\ActExample> gh act
 time="2024-05-10T10:35:57+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and daemon socket 'npipe:////./pipe/docker_engine'"
