@@ -31,10 +31,14 @@ gh act push
 gh act --workflows .github/workflows/main.yml
 ```
 
+### Pass environment variables
+``` cmd
+gh act -W .github/workflows/main.yml --env CONFIGURATION=Debug --env RUN_TESTS=false
+```
+
 ## :memo: Logging 
 ### Logging (1st time)
 This needs to download the catthehacker/ubuntu:act-latest image and cache some JavaScript actions like `actions/setup-dotnet@v3`.
-
 
 ```
 time="2024-05-10T11:11:42+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and daemon socket 'npipe:////./pipe/docker_engine'"

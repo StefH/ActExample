@@ -1,5 +1,9 @@
 name: Build with Tests
 
+env:
+  CONFIGURATION: Release
+  RUN_TESTS: true
+
 on: [push]
 
 jobs:
@@ -16,9 +20,10 @@ jobs:
               
     - name: Build Project
       run: |
-        dotnet build ./ActExample/ActExample.csproj -c Release
+        dotnet build ./ActExample/ActExample.csproj -c CONFIGURATION
 
     - name: Run Tests
+      if: env.RUN_TESTS == 'true'
       run: |
-        dotnet build ./ActExampleTests/ActExampleTests.csproj -c Release
-        dotnet test ./ActExampleTests/ActExampleTests.csproj -c Release --no-build
+        dotnet build ./ActExampleTests/ActExampleTests.csproj -c CONFIGURATION
+        dotnet test ./ActExampleTests/ActExampleTests.csproj -c CONFIGURATION --no-build
