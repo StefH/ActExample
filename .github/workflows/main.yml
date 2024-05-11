@@ -25,5 +25,4 @@ jobs:
     - name: Run Tests
       if: env.RUN_TESTS == 'true'
       run: |
-        dotnet build ./ActExampleTests/ActExampleTests.csproj -c CONFIGURATION
-        dotnet test ./ActExampleTests/ActExampleTests.csproj -c CONFIGURATION --no-build
+        dotnet test ./ActExampleTests/ActExampleTests.csproj -c CONFIGURATION
